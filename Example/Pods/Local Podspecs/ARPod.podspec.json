@@ -1,9 +1,9 @@
 {
   "name": "ARPod",
-  "version": "0.1.0",
-  "summary": "A short description of ARPod.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Mario Vargas/ARPod",
+  "version": "1.0.0",
+  "summary": "Library used for testing new AR features",
+  "description": "Library used for testing new AR features. This is for a client",
+  "homepage": "https://github.com/cmarioRV/ARPod",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,22 @@
     "Mario Vargas": "mariomad18@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Mario Vargas/ARPod.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/cmarioRV/ARPod.git",
+    "tag": "1.0.0"
   },
+  "swift_versions": "4.1",
   "platforms": {
-    "ios": "10.0"
+    "ios": "13.0"
   },
-  "source_files": "ARPod/Classes/**/*"
+  "source_files": "ARPod/Classes/**/*",
+  "resource_bundles": {
+    "ARPod": [
+      "ARPod/Assets/*.png"
+    ]
+  },
+  "frameworks": [
+    "UIKit",
+    "QuartzCore"
+  ],
+  "swift_version": "4.1"
 }

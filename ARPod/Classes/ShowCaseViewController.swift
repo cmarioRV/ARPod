@@ -1,37 +1,20 @@
-//
-//  ARFilterViewController.swift
-//  ARPod
-//
-//  Created by Mario Rúa on 2/11/23.
-//
+// The Swift Programming Language
+// https://docs.swift.org/swift-book
 
-import Foundation
-import ARKit
 import UIKit
+import ARKit
+import SwiftUI
+import Combine
+import QuartzCore
 
-public class ARFilterViewController: UIViewController {
-    public enum FacialPart {
-        case lips
-        case eyeShadow
-        case eyeLiner
-    }
-    
-    public enum CallType {
-        case colorSensing
-        case filter(facialPart: FacialPart, color: UIColor)
-    }
-    
-    private enum Constants {
-        // Distance between faceOverlayBox.minY and view.center.y
-        static let faceOverlayViewCenterOffsetY = 250.0
-    }
-    
-    private let viewModel: ViewModel
-    private let callType: CallType
-    private var arView = ARSCNView(frame: .zero)
+@available(iOS 13.0, *)
+class ShowCaseViewController: UIViewController {
+    private var arView: ARSCNView = ARSCNView(frame: .zero)
     private var sceneDelegate = FullFaceSceneViewDelegate()
     private let luminosityWarningView = UnsuitableLuminosityWarningView()
     private let luminosityBuffer = CircularBuffer(size: 10)
+    private var minLuminosity: CGFloat = 1000
+    private var maxLuminosity: CGFloat = 4000
     private var cameraView = UIView()
     
     private lazy var settingsView = ShowCaseSettingsView(onSelect: {
@@ -67,47 +50,32 @@ public class ARFilterViewController: UIViewController {
         return button
     }()
     
+    private enum Constants {
+        // Distance between faceOverlayBox.minY and view.center.y
+        static let faceOverlayViewCenterOffsetY = 250.0
+    }
+    
     private lazy var faceOverlayBox: CGRect = {
         let faceWidthToHeightRatio = 0.6
         let screenFactor = 0.8
         let radius = self.view.center.x * screenFactor
         let yCenterOffset = self.view.center.y - Constants.faceOverlayViewCenterOffsetY
-        let rect = CGRect(origin: .init(x: self.view.center.x - radius,
-                                        y: yCenterOffset),
-                          size: .init(width: radius * 2,
-                                      height: radius * 2 / faceWidthToHeightRatio))
+        let rect = CGRect(origin: .init(x: self.view.center.x - radius, y: yCenterOffset), size: .init(width: radius * 2, height: radius * 2 / faceWidthToHeightRatio))
         return rect
     }()
     
-    public init(viewModel: ViewModel, callType: CallType) {
-        self.viewModel = viewModel
-        self.callType = callType
-        
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = "Show case"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gearshape.fill"), style: .plain, target: self, action: #selector(didTapSettingsButton))
+        
         setupARView()
+        setupStartButton()
         setupLuminosityLabel()
         setupLuminosityWarningView()
         setupFaceOverlayView()
         sceneDelegate.luminosityDelegate = self
-        startLightSensing()
-    }
-    
-    private func makeARTrackingConfiguration() -> ARConfiguration {
-        let configuration = ARFaceTrackingConfiguration()
-        if ARFaceTrackingConfiguration.isSupported {
-            configuration.maximumNumberOfTrackedFaces = 1
-        }
-        return configuration
     }
     
     private func setupARView() {
@@ -150,6 +118,21 @@ public class ARFilterViewController: UIViewController {
         luminosityWarningView.layoutIfNeeded()
     }
     
+    private func setupStartButton() {
+        startButton.addTarget(self, action: #selector(didTapStartButton), for: .touchUpInside)
+        view.addSubview(startButton)
+        startButton.setBackgroundColor(.init(hex: "#EA899A"), for: .normal)
+        startButton.setBackgroundColor(.gray, for: .disabled)
+        startButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            startButton.heightAnchor.constraint(equalToConstant: 50),
+            startButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            startButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            startButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50)
+        ])
+    }
+    
     private func setupFaceOverlayView() {
         addSilhouette(cameraView)
         view.addSubview(cameraView)
@@ -165,11 +148,30 @@ public class ARFilterViewController: UIViewController {
         cameraView.isHidden = true
     }
     
+    private func makeARTrackingConfiguration() -> ARConfiguration {
+        let configuration = ARFaceTrackingConfiguration()
+        if ARFaceTrackingConfiguration.isSupported {
+            configuration.maximumNumberOfTrackedFaces = 1
+        }
+        return configuration
+    }
+    
+    @objc func didTapStartButton(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.cameraView.isHidden = false
+            self.startButton.isHidden = true
+        }
+    }
+    
+    @objc func didTapSettingsButton() {
+        navigationController?.present(UIHostingController(rootView: settingsView), animated: true)
+    }
+    
     private func deg2rad(_ number: Double) -> CGFloat{
         return CGFloat(number * Double.pi / 180)
     }
     
-    private func addSilhouette(_ cameraView: UIView) {
+    private func addSilhouette(_ cameraView: UIView){
         let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height), cornerRadius: 0)
         
         let radius = faceOverlayBox.width / 2
@@ -188,17 +190,14 @@ public class ARFilterViewController: UIViewController {
         
         let fillLayer = CAShapeLayer()
         fillLayer.path = path.cgPath
-        fillLayer.fillRule = kCAFillRuleEvenOdd
+        //fillLayer.fillRule = .evenOdd
         fillLayer.opacity = 0.7
         cameraView.layer.addSublayer(fillLayer)
     }
-    
-    private func startLightSensing() {
-        
-    }
 }
 
-extension ARFilterViewController: LuminosityReporting {
+@available(iOS 13.0, *)
+extension ShowCaseViewController: LuminosityReporting {
     func luminosityUpdated(_ value: CGFloat) {
         DispatchQueue.main.async {
             guard let luminosity = self.luminosityBuffer.add(value: value) else {
@@ -206,51 +205,18 @@ extension ARFilterViewController: LuminosityReporting {
             }
             self.luminosityLabel.text = "Lumens: \(String(format: "%.0f", luminosity))"
             
-            let luminosityAboveMin = luminosity > self.viewModel.lowLight.limit
-            let luminosityBelowMax = luminosity < self.viewModel.highLight.limit
+            let luminosityAboveMin = luminosity > self.minLuminosity
+            let luminosityBelowMax = luminosity < self.maxLuminosity
             self.luminosityWarningView.isHidden = luminosityAboveMin && luminosityBelowMax
             self.startButton.isEnabled = luminosityAboveMin && luminosityBelowMax
             
             if !luminosityAboveMin {
-//                self.luminosityWarningView.configure(.init(title: "Low illumination. Please move to a brighter location and try again"))
-                self.luminosityWarningView.configure(.init(title: self.viewModel.lowLight.warningMessage))
+                self.luminosityWarningView.configure(.init(title: "Low illumination. Please move to a brighter location and try again"))
             }
             
             if !luminosityBelowMax {
-//                self.luminosityWarningView.configure(.init(title: "High illumination. Please move to a less illuminated place and try again."))
-                self.luminosityWarningView.configure(.init(title: self.viewModel.highLight.warningMessage))
+                self.luminosityWarningView.configure(.init(title: "High illumination. Please move to a less illuminated place and try again."))
             }
         }
     }
 }
-
-extension ARFilterViewController {
-    enum LightLimits {
-        case lowLight(limit: Double, warningMessage: String)
-        case highLight(limit: Double, warningMessage: String)
-        
-        var limit: Double {
-            switch self {
-            case .highLight(limit: let limit, warningMessage: _):
-                return limit
-            case .lowLight(limit: let limit, warningMessage: _):
-                return limit
-            }
-        }
-        
-        var warningMessage: String {
-            switch self {
-            case .highLight(limit: _, warningMessage: let warningMessage):
-                return warningMessage
-            case .lowLight(limit: _, warningMessage: let warningMessage):
-                return warningMessage
-            }
-        }
-    }
-    
-    public struct ViewModel {
-        let lowLight: LightLimits
-        let highLight: LightLimits
-    }
-}
-
