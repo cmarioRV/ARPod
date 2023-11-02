@@ -1,0 +1,16 @@
+PODS:
+  - ARPod (0.1.0)
+
+DEPENDENCIES:
+  - ARPod (from `../`)
+
+EXTERNAL SOURCES:
+  ARPod:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ARPod: 0059bfcb61b1574f09f7e53bc0b6f24f1a6f8610
+
+PODFILE CHECKSUM: 8f7aa4ed8eb6ea98984f57b29d6089a43db871ea
+
+COCOAPODS: 1.11.3
