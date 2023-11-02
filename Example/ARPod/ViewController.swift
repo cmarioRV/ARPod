@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let arViewController = ARFilterViewController(viewModel: .init(lowLight: .lowLight(limit: 1000, warningMessage: "Low light warning"), highLight: .highLight(limit: 4000, warningMessage: "High light warning")), callType: .colorSensing)
+        self.navigationController?.pushViewController(arViewController, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.source_files = 'ARPod/Classes/**/*'
   
    s.resource_bundles = {
-     'ARPod' => ['ARPod/Assets/*.png']
+     'ARPod' => ['ARPod/Assets/*']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

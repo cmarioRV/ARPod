@@ -8,7 +8,7 @@ import Combine
 import QuartzCore
 
 @available(iOS 13.0, *)
-class ShowCaseViewController: UIViewController {
+public class ShowCaseViewController: UIViewController {
     private var arView: ARSCNView = ARSCNView(frame: .zero)
     private var sceneDelegate = FullFaceSceneViewDelegate()
     private let luminosityWarningView = UnsuitableLuminosityWarningView()
