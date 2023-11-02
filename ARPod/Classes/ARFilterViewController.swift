@@ -10,7 +10,7 @@ import ARKit
 import UIKit
 
 public class ARFilterViewController: UIViewController {
-    public enum FacialPart {
+    public enum FacialPart: String {
         case lips
         case eyeShadow
         case eyeLiner
@@ -224,7 +224,7 @@ extension ARFilterViewController: LuminosityReporting {
     }
 }
 
-extension ARFilterViewController {
+public extension ARFilterViewController {
     enum LightLimits {
         case lowLight(limit: Double, warningMessage: String)
         case highLight(limit: Double, warningMessage: String)
@@ -248,9 +248,14 @@ extension ARFilterViewController {
         }
     }
     
-    public struct ViewModel {
+    struct ViewModel {
         let lowLight: LightLimits
         let highLight: LightLimits
+        
+        public init(lowLight: LightLimits, highLight: LightLimits) {
+            self.lowLight = lowLight
+            self.highLight = highLight
+        }
     }
 }
 
