@@ -10,7 +10,7 @@ import QuartzCore
 @available(iOS 13.0, *)
 public class ShowCaseViewController: UIViewController {
     private var arView: ARSCNView = ARSCNView(frame: .zero)
-    private var sceneDelegate = FullFaceSceneViewManager()
+    private var sceneDelegate = FullFaceSceneViewManager(sceneType: .colorSensing)
     private let luminosityWarningView = UnsuitableLuminosityWarningView()
     private let luminosityBuffer = CircularBuffer(size: 10)
     private var minLuminosity: CGFloat = 1000

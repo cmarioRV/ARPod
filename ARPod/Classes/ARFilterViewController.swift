@@ -82,8 +82,7 @@ public class ARFilterViewController: UIViewController {
     public init(viewModel: ViewModel, callType: CallType) {
         self.viewModel = viewModel
         self.callType = callType
-        sceneDelegate = FullFaceSceneViewManager()
-        sceneDelegate
+        sceneDelegate = FullFaceSceneViewManager(sceneType: callType)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -221,18 +220,25 @@ public class ARFilterViewController: UIViewController {
     
     @objc func didTapStartButton(_ sender: UIButton) {
         DispatchQueue.main.async {
+            self.startButton.isHidden = true
+            
             switch self.callType {
             case .colorSensing:
                 self.cameraView.isHidden = false
-                self.startButton.isHidden = true
             case .filter(facialPart: let facialPart, color: let facialColor):
                 switch facialPart {
                 case .lips:
-                    Materials.lipsMaterial.diffuse.contents = UIImage(named: "lipsMaterial.png")?.tint(with: facialColor)
+                    Materials.lipsMaterial.diffuse.contents = UIImage(named: "lipsMaterial.png",
+                                                                      in: BundleManager.resourceBundle,
+                                                                      with: nil)?.tint(with: facialColor)
                 case .eyeShadow:
-                    Materials.eyeshadowMaterial.diffuse.contents = UIImage(named: "eyeshadowMaterial.png")?.tint(with: facialColor)
+                    Materials.eyeshadowMaterial.diffuse.contents = UIImage(named: "eyeshadowMaterial.png",
+                                                                           in: BundleManager.resourceBundle,
+                                                                           with: nil)?.tint(with: facialColor)
                 case .eyeLiner:
-                    Materials.eyelinerMaterial.diffuse.contents = UIImage(named: "eyelinerMaterial.png")?.tint(with: facialColor)
+                    Materials.eyelinerMaterial.diffuse.contents = UIImage(named: "eyelinerMaterial.png",
+                                                                          in: BundleManager.resourceBundle,
+                                                                          with: nil)?.tint(with: facialColor)
                 }
             }
         }

@@ -19,12 +19,17 @@ class FullFaceSceneViewManager: NSObject, ARSCNViewDelegate {
     var eyelinesNode: SCNNode!
     var lipsNode: SCNNode!
     var normalSource: SCNGeometrySource!
-    var sceneType: ARFilterViewController.CallType?
+    var sceneType: ARFilterViewController.CallType
     weak var luminosityDelegate: LuminosityReporting?
+    
+    public init(sceneType: ARFilterViewController.CallType) {
+        self.sceneType = sceneType
+    }
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return nil }
-        
+        guard case .filter(_, _) = sceneType else { return nil }
+
         let geometry = faceAnchor.geometry
         
         // Calculate normals for smooth shading
@@ -70,37 +75,33 @@ class FullFaceSceneViewManager: NSObject, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let faceAnchor = anchor as? ARFaceAnchor, let sceneType = sceneType else { return }
+        guard let faceAnchor = anchor as? ARFaceAnchor else { return }
+        guard case .filter(_, _) = sceneType else { return }
         
-        if case .filter(let facialPart, let color) = sceneType {
-            let geometry = faceAnchor.geometry
-            
-            let verticesSource = SCNGeometrySource(vertices: geometry.vertices.map { .init($0) })
-            let coordinatesSource = SCNGeometrySource(textureCoordinates: geometry.textureCoordinates.map {
-                CGPoint(x: CGFloat($0.x), y: CGFloat($0.y))
-            })
-            let element = SCNGeometryElement(indices: geometry.triangleIndices, primitiveType: .triangles)
-            
-            //let faceGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource], elements: [element])
-            
-            switch facialPart {
-            case .eyeLiner:
-                let eyelinesGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
-                eyelinesGeometry.materials = [Materials.eyelinerMaterial]
-                eyelinesNode.geometry = eyelinesGeometry
-            case .eyeShadow:
-                let eyeshadowGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
-                eyeshadowGeometry.materials = [Materials.eyeshadowMaterial]
-                eyeshadowNode.geometry = eyeshadowGeometry
-            case .lips:
-                let lipsGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
-                lipsGeometry.materials = [Materials.lipsMaterial]
-                lipsNode.geometry = lipsGeometry
-            }
-            
-            //node.geometry = faceGeometry
-            node.simdTransform = faceAnchor.transform
-        }
+        let geometry = faceAnchor.geometry
+        
+        let verticesSource = SCNGeometrySource(vertices: geometry.vertices.map { .init($0) })
+        let coordinatesSource = SCNGeometrySource(textureCoordinates: geometry.textureCoordinates.map {
+            CGPoint(x: CGFloat($0.x), y: CGFloat($0.y))
+        })
+        let element = SCNGeometryElement(indices: geometry.triangleIndices, primitiveType: .triangles)
+        
+        //let faceGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource], elements: [element])
+        
+        let eyeshadowGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
+        eyeshadowGeometry.materials = [Materials.eyeshadowMaterial]
+        eyeshadowNode.geometry = eyeshadowGeometry
+        
+        let eyelinesGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
+        eyelinesGeometry.materials = [Materials.eyelinerMaterial]
+        eyelinesNode.geometry = eyelinesGeometry
+        
+        let lipsGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
+        lipsGeometry.materials = [Materials.lipsMaterial]
+        lipsNode.geometry = lipsGeometry
+        
+        //node.geometry = faceGeometry
+        node.simdTransform = faceAnchor.transform
     }
 }
 
