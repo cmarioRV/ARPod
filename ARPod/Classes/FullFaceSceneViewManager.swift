@@ -14,11 +14,12 @@ protocol LuminosityReporting: AnyObject {
 }
 
 @available(iOS 11.0, *)
-class FullFaceSceneViewDelegate: NSObject, ARSCNViewDelegate {
+class FullFaceSceneViewManager: NSObject, ARSCNViewDelegate {
     var eyeshadowNode: SCNNode!
     var eyelinesNode: SCNNode!
     var lipsNode: SCNNode!
     var normalSource: SCNGeometrySource!
+    var sceneType: ARFilterViewController.CallType?
     weak var luminosityDelegate: LuminosityReporting?
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -69,37 +70,42 @@ class FullFaceSceneViewDelegate: NSObject, ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let faceAnchor = anchor as? ARFaceAnchor else { return }
+        guard let faceAnchor = anchor as? ARFaceAnchor, let sceneType = sceneType else { return }
         
-        let geometry = faceAnchor.geometry
-        
-        let verticesSource = SCNGeometrySource(vertices: geometry.vertices.map { .init($0) })
-        let coordinatesSource = SCNGeometrySource(textureCoordinates: geometry.textureCoordinates.map {
-            CGPoint(x: CGFloat($0.x), y: CGFloat($0.y))
-        })
-        let element = SCNGeometryElement(indices: geometry.triangleIndices, primitiveType: .triangles)
-        
-        //let faceGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource], elements: [element])
-        
-        let eyeshadowGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
-        eyeshadowGeometry.materials = [Materials.eyeshadowMaterial]
-        eyeshadowNode.geometry = eyeshadowGeometry
-        
-        let eyelinesGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
-        eyelinesGeometry.materials = [Materials.eyelinerMaterial]
-        eyelinesNode.geometry = eyelinesGeometry
-        
-        let lipsGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
-        lipsGeometry.materials = [Materials.lipsMaterial]
-        lipsNode.geometry = lipsGeometry
-        
-        //node.geometry = faceGeometry
-        node.simdTransform = faceAnchor.transform
+        if case .filter(let facialPart, let color) = sceneType {
+            let geometry = faceAnchor.geometry
+            
+            let verticesSource = SCNGeometrySource(vertices: geometry.vertices.map { .init($0) })
+            let coordinatesSource = SCNGeometrySource(textureCoordinates: geometry.textureCoordinates.map {
+                CGPoint(x: CGFloat($0.x), y: CGFloat($0.y))
+            })
+            let element = SCNGeometryElement(indices: geometry.triangleIndices, primitiveType: .triangles)
+            
+            //let faceGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource], elements: [element])
+            
+            switch facialPart {
+            case .eyeLiner:
+                let eyelinesGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
+                eyelinesGeometry.materials = [Materials.eyelinerMaterial]
+                eyelinesNode.geometry = eyelinesGeometry
+            case .eyeShadow:
+                let eyeshadowGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
+                eyeshadowGeometry.materials = [Materials.eyeshadowMaterial]
+                eyeshadowNode.geometry = eyeshadowGeometry
+            case .lips:
+                let lipsGeometry = SCNGeometry(sources: [verticesSource, coordinatesSource, normalSource], elements: [element])
+                lipsGeometry.materials = [Materials.lipsMaterial]
+                lipsNode.geometry = lipsGeometry
+            }
+            
+            //node.geometry = faceGeometry
+            node.simdTransform = faceAnchor.transform
+        }
     }
 }
 
 @available(iOS 11.0, *)
-extension FullFaceSceneViewDelegate: ARSessionDelegate {
+extension FullFaceSceneViewManager: ARSessionDelegate {
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         guard let faceLight = session.currentFrame?.lightEstimate as? ARDirectionalLightEstimate else {
             return

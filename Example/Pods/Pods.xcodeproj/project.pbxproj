@@ -31,7 +31,7 @@
 		8BB0910F2D130747A04CD92FB9B5983A /* ARPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B8223F03182B1E95437A186655EFAA /* ARPod-dummy.m */; };
 		B372608F82C778E1E5E567AE9248F770 /* eyelinerMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = C75177BE0D2CF6346A89BD6FE4274A64 /* eyelinerMaterial.png */; };
 		D02E993F83E9AC920E04C72BA6C9CB2E /* Pods-ARPod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C60FE4BA317171BF9C05EF447B37FACF /* Pods-ARPod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1064FA04DD2EAACCEC2CC190EE183BF /* FullFaceSceneViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewDelegate.swift */; };
+		E1064FA04DD2EAACCEC2CC190EE183BF /* FullFaceSceneViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewManager.swift */; };
 		E19E8B325950138468AB991B72B3CD6C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80BBDCB7CD7B9928C522D63C4D693CB /* UIColor+Extensions.swift */; };
 		E326049C93EFDA3954B35B7F3C0FBCF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
 		E4A0F420336512A312A2CB1D732D0CE4 /* ShowCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090C799BADFA281C3D0EBEF8098D369 /* ShowCaseViewController.swift */; };
@@ -100,7 +100,7 @@
 		B80BBDCB7CD7B9928C522D63C4D693CB /* UIColor+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "ARPod/Classes/UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		B82C7D9D0417073DAF5CF6E31F751744 /* lipsMaterial.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = lipsMaterial.png; path = ARPod/Assets/lipsMaterial.png; sourceTree = "<group>"; };
 		BB8724B6C389746AE1491F09C9CBFCD4 /* ResourceBundle-ARPod-ARPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ARPod-ARPod-Info.plist"; sourceTree = "<group>"; };
-		BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullFaceSceneViewDelegate.swift; path = ARPod/Classes/FullFaceSceneViewDelegate.swift; sourceTree = "<group>"; };
+		BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullFaceSceneViewManager.swift; path = ARPod/Classes/FullFaceSceneViewManager.swift; sourceTree = "<group>"; };
 		BFB16BDE2BE9DFE9E6ADE8D4774EB8E1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "ARPod/Classes/UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		C1CEDC776A69481E7C25F162BD6CA0A5 /* Pods-ARPod_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ARPod_Example"; path = Pods_ARPod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60FE4BA317171BF9C05EF447B37FACF /* Pods-ARPod_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARPod_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 				0216A495003F6076E3BCC4B61325CCD0 /* CircularBuffer.swift */,
 				C75177BE0D2CF6346A89BD6FE4274A64 /* eyelinerMaterial.png */,
 				9E3289624704359335A934CBAE8EE1B9 /* eyeshadowMaterial.png */,
-				BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewDelegate.swift */,
+				BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewManager.swift */,
 				B82C7D9D0417073DAF5CF6E31F751744 /* lipsMaterial.png */,
 				F1C1F8B60B185BEEEC28778B75218163 /* Materials.swift */,
 				1F7AEDFF071D93B69C0EEF6632E261CF /* SCNVector3+Extensions.swift */,
@@ -492,7 +492,7 @@
 				8BB0910F2D130747A04CD92FB9B5983A /* ARPod-dummy.m in Sources */,
 				0E965C1746977AF6D3B0604087396BBD /* BundleManager.swift in Sources */,
 				F6FDEEB6069B2622808CDC5EAFF41D3A /* CircularBuffer.swift in Sources */,
-				E1064FA04DD2EAACCEC2CC190EE183BF /* FullFaceSceneViewDelegate.swift in Sources */,
+				E1064FA04DD2EAACCEC2CC190EE183BF /* FullFaceSceneViewManager.swift in Sources */,
 				24BE42B7584B094A2A4F513013F3B5DF /* Materials.swift in Sources */,
 				78BE851F737CB1911FAA7AD7924585FD /* SCNVector3+Extensions.swift in Sources */,
 				4789B31803DE1958086C3B2A5DA0394C /* ShowCaseSettingsView.swift in Sources */,

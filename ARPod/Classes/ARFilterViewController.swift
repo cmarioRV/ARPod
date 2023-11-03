@@ -29,7 +29,7 @@ public class ARFilterViewController: UIViewController {
     private let viewModel: ViewModel
     private let callType: CallType
     private var arView = ARSCNView(frame: .zero)
-    private var sceneDelegate = FullFaceSceneViewDelegate()
+    private var sceneDelegate: FullFaceSceneViewManager
     private let luminosityWarningView = UnsuitableLuminosityWarningView()
     private let luminosityBuffer = CircularBuffer(size: 10)
     private var cameraView = UIView()
@@ -82,7 +82,8 @@ public class ARFilterViewController: UIViewController {
     public init(viewModel: ViewModel, callType: CallType) {
         self.viewModel = viewModel
         self.callType = callType
-        
+        sceneDelegate = FullFaceSceneViewManager()
+        sceneDelegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -101,6 +102,11 @@ public class ARFilterViewController: UIViewController {
         setupFaceOverlayView()
         sceneDelegate.luminosityDelegate = self
         startLightSensing()
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        arView.session.pause()
     }
     
     private func makeARTrackingConfiguration() -> ARConfiguration {
@@ -215,8 +221,20 @@ public class ARFilterViewController: UIViewController {
     
     @objc func didTapStartButton(_ sender: UIButton) {
         DispatchQueue.main.async {
-            self.cameraView.isHidden = false
-            self.startButton.isHidden = true
+            switch self.callType {
+            case .colorSensing:
+                self.cameraView.isHidden = false
+                self.startButton.isHidden = true
+            case .filter(facialPart: let facialPart, color: let facialColor):
+                switch facialPart {
+                case .lips:
+                    Materials.lipsMaterial.diffuse.contents = UIImage(named: "lipsMaterial.png")?.tint(with: facialColor)
+                case .eyeShadow:
+                    Materials.eyeshadowMaterial.diffuse.contents = UIImage(named: "eyeshadowMaterial.png")?.tint(with: facialColor)
+                case .eyeLiner:
+                    Materials.eyelinerMaterial.diffuse.contents = UIImage(named: "eyelinerMaterial.png")?.tint(with: facialColor)
+                }
+            }
         }
     }
 }
