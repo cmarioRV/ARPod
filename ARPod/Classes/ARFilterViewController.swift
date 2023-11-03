@@ -95,6 +95,7 @@ public class ARFilterViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Show case"
         setupARView()
+        setupStartButton()
         setupLuminosityLabel()
         setupLuminosityWarningView()
         setupFaceOverlayView()
@@ -123,6 +124,21 @@ public class ARFilterViewController: UIViewController {
         arView.delegate = sceneDelegate
         arView.session.delegate = sceneDelegate
         arView.session.run(makeARTrackingConfiguration())
+    }
+    
+    private func setupStartButton() {
+        startButton.addTarget(self, action: #selector(didTapStartButton), for: .touchUpInside)
+        view.addSubview(startButton)
+        startButton.setBackgroundColor(.init(hex: "#EA899A"), for: .normal)
+        startButton.setBackgroundColor(.gray, for: .disabled)
+        startButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            startButton.heightAnchor.constraint(equalToConstant: 50),
+            startButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            startButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            startButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50)
+        ])
     }
     
     private func setupLuminosityLabel() {
@@ -196,6 +212,13 @@ public class ARFilterViewController: UIViewController {
     private func startLightSensing() {
         
     }
+    
+    @objc func didTapStartButton(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.cameraView.isHidden = false
+            self.startButton.isHidden = true
+        }
+    }
 }
 
 extension ARFilterViewController: LuminosityReporting {
@@ -212,12 +235,10 @@ extension ARFilterViewController: LuminosityReporting {
             self.startButton.isEnabled = luminosityAboveMin && luminosityBelowMax
             
             if !luminosityAboveMin {
-//                self.luminosityWarningView.configure(.init(title: "Low illumination. Please move to a brighter location and try again"))
                 self.luminosityWarningView.configure(.init(title: self.viewModel.lowLight.warningMessage))
             }
             
             if !luminosityBelowMax {
-//                self.luminosityWarningView.configure(.init(title: "High illumination. Please move to a less illuminated place and try again."))
                 self.luminosityWarningView.configure(.init(title: self.viewModel.highLight.warningMessage))
             }
         }

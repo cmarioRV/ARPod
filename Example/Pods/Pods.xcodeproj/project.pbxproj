@@ -8,118 +8,123 @@
 
 /* Begin PBXBuildFile section */
 		05DDDE745AD8F775B57DC1550D6CFC33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		115925307A44708B6989238D04B6B3CC /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862FE0B32BDEDDB7C8233A89701AF7D3 /* UIButton+Extensions.swift */; };
-		16D97814447AFDFE7A9994D2580F8998 /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B02EAE53E70D8557686505CB55978B /* SCNVector3+Extensions.swift */; };
-		19140D5B8FCDB1B43D35A9C2B310D383 /* CircularBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B96A71FA66CB29A0F1D594C8CCDB4A9 /* CircularBuffer.swift */; };
-		20410C7CD09A8597AD1E16B526D28101 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		34BEF0639B858C6C3A1E09038922442F /* ShowCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549DC22ED40EBD78282C09A628D67CF5 /* ShowCaseViewController.swift */; };
-		3F7127579A4A90C37BF76FB1564B37FA /* lipsMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = 23D2CB758E58E4B2EF8590E0B37A6299 /* lipsMaterial.png */; };
-		4EE80818FF5ECCE85776019296672B8E /* FullFaceSceneViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0DB6C166BB8C2504FDFBB79E71471B /* FullFaceSceneViewDelegate.swift */; };
-		501BE97C0509BCB695B6C86D93E867A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
+		05E6244E1C454F23BA53C73AAB1E3174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
+		0E965C1746977AF6D3B0604087396BBD /* BundleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D959BAB7FA01D562B8EB6F2C85A045B2 /* BundleManager.swift */; };
+		21BB2B4DDD72E9C648B298CB951EB234 /* ARFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EE39B418CEDF84CC984A672363D0FE /* ARFilterViewController.swift */; };
+		24BE42B7584B094A2A4F513013F3B5DF /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C1F8B60B185BEEEC28778B75218163 /* Materials.swift */; };
+		2EF7052EF82ACDE6341905DF2C4647AA /* eyeshadowMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3289624704359335A934CBAE8EE1B9 /* eyeshadowMaterial.png */; };
+		3BF0184C5435479F4C9D223C98D9715E /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05115F51EB2E9ED23429400B8A03CD8 /* UIButton+Extensions.swift */; };
+		42EF74C8E9749C6F888DA9521423BC5C /* ARPod-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 387BDFDA40F106C60BF091FE707AF708 /* ARPod-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4789B31803DE1958086C3B2A5DA0394C /* ShowCaseSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739D9AB90F39B514C7ABBD89FA1E4BC6 /* ShowCaseSettingsView.swift */; };
+		524A9072C07BAC9920472F3C1D6DB7DC /* UnsuitableLuminosityWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE31F0E84A0E61DFCE8DADC0DC94265 /* UnsuitableLuminosityWarningView.swift */; };
+		54963C0F13E8A38E34C1D3CC3C510677 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */; };
 		61249899849FBB82A1BB71030B739412 /* Pods-ARPod_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B89AD3888A43396D3BA0C6454CDD1 /* Pods-ARPod_Example-dummy.m */; };
-		620EAFE8D3A3886CDDA9DEEB9CF12A0D /* ARPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C474DBDC257BBC34566F7E89FDB79D5 /* ARPod-dummy.m */; };
 		633539FDB32EFC6DFE1777AAB41BD250 /* Pods-ARPod_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3C94DC2B6994BCBEE4882DC86FF936 /* Pods-ARPod_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		648F6616B7610A54A65EC0D06C9B74DE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CC8598F1D40288B3F6D3CB247285A /* UIColor+Extensions.swift */; };
-		69BF00F3C982346944284B3163DD0192 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364B57D21106948FF69F8DCFAE9C71BD /* UIImage+Extensions.swift */; };
-		6E74ED84DE714BCAD0B39195D3996EF3 /* eyeshadowMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D20221EAFC658335D21CA3DD962409 /* eyeshadowMaterial.png */; };
 		71542EB703209F00696ED1CD58A0840B /* Pods-ARPod_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F6231FF0D6D1B42CF906B6052016A /* Pods-ARPod_Tests-dummy.m */; };
-		751ADDD28C61AB2936AB6389CB41A7FC /* ARPod-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE10DB6FCAAD17B1BF6C2120EA6FF6E2 /* ARPod-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78A815C94F8B9D638BDB655336C923F3 /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780AB17FE457EDD9603CF5805FEEA2F9 /* Materials.swift */; };
+		7442E32F5744488D59D0AD81A6B459FB /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB16BDE2BE9DFE9E6ADE8D4774EB8E1 /* UIImage+Extensions.swift */; };
+		78BE851F737CB1911FAA7AD7924585FD /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7AEDFF071D93B69C0EEF6632E261CF /* SCNVector3+Extensions.swift */; };
+		7982C1F9C0526742FE72525EBB2177B0 /* ARPod.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4F9665EC09231D1844796DE17B068C2 /* ARPod.bundle */; };
 		8387D5ADFEF3938EEC33D5A41F196577 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		8B9277F02AF3F2B40076C2A0 /* ARFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9277EF2AF3F2B40076C2A0 /* ARFilterViewController.swift */; };
-		AB805D36FB3C562393A462F337091995 /* eyelinerMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = 08471DEF8E80049FDCF9495259BBBB6D /* eyelinerMaterial.png */; };
-		C79B8A7C367670527DB720EEA94E6308 /* ShowCaseSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CA62ECB810CE6E67BE6522915AB8C0 /* ShowCaseSettingsView.swift */; };
+		8B43EB742AF46D87001B9A9F /* eyelinerMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = C75177BE0D2CF6346A89BD6FE4274A64 /* eyelinerMaterial.png */; };
+		8B43EB752AF46D89001B9A9F /* eyeshadowMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E3289624704359335A934CBAE8EE1B9 /* eyeshadowMaterial.png */; };
+		8B43EB762AF46D8C001B9A9F /* lipsMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = B82C7D9D0417073DAF5CF6E31F751744 /* lipsMaterial.png */; };
+		8BB0910F2D130747A04CD92FB9B5983A /* ARPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B8223F03182B1E95437A186655EFAA /* ARPod-dummy.m */; };
+		B372608F82C778E1E5E567AE9248F770 /* eyelinerMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = C75177BE0D2CF6346A89BD6FE4274A64 /* eyelinerMaterial.png */; };
 		D02E993F83E9AC920E04C72BA6C9CB2E /* Pods-ARPod_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C60FE4BA317171BF9C05EF447B37FACF /* Pods-ARPod_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1D3CF69248A8E3C75435018386A24A4 /* UnsuitableLuminosityWarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6A16872E65232E3472C37BB060C0D /* UnsuitableLuminosityWarningView.swift */; };
-		F0A909176EB82EA151725BC70FBAD13D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */; };
-		F7F410D2897380E6FF58363EFFA5B2A1 /* ARPod.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D4F9665EC09231D1844796DE17B068C2 /* ARPod.bundle */; };
+		E1064FA04DD2EAACCEC2CC190EE183BF /* FullFaceSceneViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewDelegate.swift */; };
+		E19E8B325950138468AB991B72B3CD6C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80BBDCB7CD7B9928C522D63C4D693CB /* UIColor+Extensions.swift */; };
+		E326049C93EFDA3954B35B7F3C0FBCF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		E4A0F420336512A312A2CB1D732D0CE4 /* ShowCaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090C799BADFA281C3D0EBEF8098D369 /* ShowCaseViewController.swift */; };
+		F5D7F09B0605E9A991F85E633A32D455 /* lipsMaterial.png in Resources */ = {isa = PBXBuildFile; fileRef = B82C7D9D0417073DAF5CF6E31F751744 /* lipsMaterial.png */; };
+		F6FDEEB6069B2622808CDC5EAFF41D3A /* CircularBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216A495003F6076E3BCC4B61325CCD0 /* CircularBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6D6E061D200AFDDA991531D94121E88E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0612774B3531364410A626AF02D7016E;
-			remoteInfo = ARPod;
-		};
-		76079EA28DDF55FB8719445DA684BB97 /* PBXContainerItemProxy */ = {
+		2606614C32FD6838C0C2A6FD65AE9883 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FABF0ADF602849C64AE61149B1CD805A;
 			remoteInfo = "Pods-ARPod_Example";
 		};
-		93E6AD289EEE99B1211EC1804C3F9434 /* PBXContainerItemProxy */ = {
+		31373F7F500C829502FCD7ADD5A9E539 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9E1698D3A1EC826640D5C24D9347AD8E;
 			remoteInfo = "ARPod-ARPod";
 		};
+		DB21C664CE127B4E63548776D3827A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0612774B3531364410A626AF02D7016E;
+			remoteInfo = ARPod;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06D20221EAFC658335D21CA3DD962409 /* eyeshadowMaterial.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = eyeshadowMaterial.png; path = ARPod/Assets/eyeshadowMaterial.png; sourceTree = "<group>"; };
-		08471DEF8E80049FDCF9495259BBBB6D /* eyelinerMaterial.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = eyelinerMaterial.png; path = ARPod/Assets/eyelinerMaterial.png; sourceTree = "<group>"; };
+		0216A495003F6076E3BCC4B61325CCD0 /* CircularBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularBuffer.swift; path = ARPod/Classes/CircularBuffer.swift; sourceTree = "<group>"; };
 		0AC5DF0FF86C1743A444594C4D1C8FD9 /* Pods-ARPod_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARPod_Tests-Info.plist"; sourceTree = "<group>"; };
 		0B9E14607E8D660EF9820A283AF7BDE7 /* Pods-ARPod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARPod_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		0FE2A61F850BF184840C4BB7CA993D98 /* ResourceBundle-ARPod-ARPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ARPod-ARPod-Info.plist"; sourceTree = "<group>"; };
-		171CC8598F1D40288B3F6D3CB247285A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "ARPod/Classes/UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		1B5E93AC9115715753201E21C8F45FD0 /* Pods-ARPod_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ARPod_Tests"; path = Pods_ARPod_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB14E2D333A15AACDCB722443452786 /* Pods-ARPod_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARPod_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1F7AEDFF071D93B69C0EEF6632E261CF /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SCNVector3+Extensions.swift"; path = "ARPod/Classes/SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
+		1FB7E7C5839DE423F499B072AACB1C0F /* ARPod.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ARPod.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		20CF22EABAB33459F7F2182C60607B7D /* Pods-ARPod_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARPod_Example.release.xcconfig"; sourceTree = "<group>"; };
-		23D2CB758E58E4B2EF8590E0B37A6299 /* lipsMaterial.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = lipsMaterial.png; path = ARPod/Assets/lipsMaterial.png; sourceTree = "<group>"; };
 		318CB97BDD5E892857C10A95A9F26060 /* Pods-ARPod_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARPod_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		364B57D21106948FF69F8DCFAE9C71BD /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "ARPod/Classes/UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		3B0DB6C166BB8C2504FDFBB79E71471B /* FullFaceSceneViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullFaceSceneViewDelegate.swift; path = ARPod/Classes/FullFaceSceneViewDelegate.swift; sourceTree = "<group>"; };
-		48E6A16872E65232E3472C37BB060C0D /* UnsuitableLuminosityWarningView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnsuitableLuminosityWarningView.swift; path = ARPod/Classes/UnsuitableLuminosityWarningView.swift; sourceTree = "<group>"; };
+		3417690D840C5F3988764B4CFA40393B /* ARPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARPod.debug.xcconfig; sourceTree = "<group>"; };
+		387BDFDA40F106C60BF091FE707AF708 /* ARPod-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARPod-umbrella.h"; sourceTree = "<group>"; };
+		465474FE70C880E6AFDF410AC8F56F08 /* ARPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARPod.release.xcconfig; sourceTree = "<group>"; };
 		4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4C474DBDC257BBC34566F7E89FDB79D5 /* ARPod-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARPod-dummy.m"; sourceTree = "<group>"; };
-		549DC22ED40EBD78282C09A628D67CF5 /* ShowCaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShowCaseViewController.swift; path = ARPod/Classes/ShowCaseViewController.swift; sourceTree = "<group>"; };
-		555C926B5682BC8169C76D7D9C733CC9 /* ARPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARPod.debug.xcconfig; sourceTree = "<group>"; };
 		565ED1B326E41C9371D4BF4906DE50B0 /* Pods-ARPod_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARPod_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		56CA62ECB810CE6E67BE6522915AB8C0 /* ShowCaseSettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShowCaseSettingsView.swift; path = ARPod/Classes/ShowCaseSettingsView.swift; sourceTree = "<group>"; };
+		59B8223F03182B1E95437A186655EFAA /* ARPod-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARPod-dummy.m"; sourceTree = "<group>"; };
 		5B4F6231FF0D6D1B42CF906B6052016A /* Pods-ARPod_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARPod_Tests-dummy.m"; sourceTree = "<group>"; };
-		65DFFE863E4EF106977B9DDD59A3CAAC /* ARPod.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ARPod.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		677E24D38D363F96CB7277A420D13ABE /* ARPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARPod.release.xcconfig; sourceTree = "<group>"; };
+		64B4229FF698389D0D8F44AE073DE3B0 /* ARPod.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARPod.modulemap; sourceTree = "<group>"; };
+		739D9AB90F39B514C7ABBD89FA1E4BC6 /* ShowCaseSettingsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShowCaseSettingsView.swift; path = ARPod/Classes/ShowCaseSettingsView.swift; sourceTree = "<group>"; };
+		7706FE75B5256078DF996F0389982189 /* ARPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ARPod-Info.plist"; sourceTree = "<group>"; };
 		77FB91FF4609D1A673C97CF43CBED0FC /* Pods-ARPod_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARPod_Tests.modulemap"; sourceTree = "<group>"; };
-		780AB17FE457EDD9603CF5805FEEA2F9 /* Materials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Materials.swift; path = ARPod/Classes/Materials.swift; sourceTree = "<group>"; };
-		8489605FF42C54C4CDDF56C0DDF97347 /* ARPod-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARPod-prefix.pch"; sourceTree = "<group>"; };
-		862FE0B32BDEDDB7C8233A89701AF7D3 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extensions.swift"; path = "ARPod/Classes/UIButton+Extensions.swift"; sourceTree = "<group>"; };
-		86B02EAE53E70D8557686505CB55978B /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SCNVector3+Extensions.swift"; path = "ARPod/Classes/SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
-		8B9277EF2AF3F2B40076C2A0 /* ARFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARFilterViewController.swift; path = ARPod/Classes/ARFilterViewController.swift; sourceTree = "<group>"; };
-		8B96A71FA66CB29A0F1D594C8CCDB4A9 /* CircularBuffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularBuffer.swift; path = ARPod/Classes/CircularBuffer.swift; sourceTree = "<group>"; };
+		7CE31F0E84A0E61DFCE8DADC0DC94265 /* UnsuitableLuminosityWarningView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnsuitableLuminosityWarningView.swift; path = ARPod/Classes/UnsuitableLuminosityWarningView.swift; sourceTree = "<group>"; };
 		8BE8F421F19B2302176FE1B14D138B3C /* Pods-ARPod_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARPod_Example-Info.plist"; sourceTree = "<group>"; };
 		8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		942B95D224CFD4F643F2702201F89C16 /* ARPod.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARPod.modulemap; sourceTree = "<group>"; };
+		98EE39B418CEDF84CC984A672363D0FE /* ARFilterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARFilterViewController.swift; path = ARPod/Classes/ARFilterViewController.swift; sourceTree = "<group>"; };
 		9C6B89AD3888A43396D3BA0C6454CDD1 /* Pods-ARPod_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ARPod_Example-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E3289624704359335A934CBAE8EE1B9 /* eyeshadowMaterial.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = eyeshadowMaterial.png; path = ARPod/Assets/eyeshadowMaterial.png; sourceTree = "<group>"; };
 		9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		A03C2824ABCB31C66C368A031380C73F /* ARPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ARPod-Info.plist"; sourceTree = "<group>"; };
+		A05115F51EB2E9ED23429400B8A03CD8 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extensions.swift"; path = "ARPod/Classes/UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		A090C799BADFA281C3D0EBEF8098D369 /* ShowCaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShowCaseViewController.swift; path = ARPod/Classes/ShowCaseViewController.swift; sourceTree = "<group>"; };
 		A54B316A5364E4C5108849C6975AC3C5 /* Pods-ARPod_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ARPod_Example.modulemap"; sourceTree = "<group>"; };
-		AE10DB6FCAAD17B1BF6C2120EA6FF6E2 /* ARPod-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARPod-umbrella.h"; sourceTree = "<group>"; };
+		A8A5C847115E5F2A6A037AEAA4ED4B7E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B220803FC64576C513206984A6E59E02 /* Pods-ARPod_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ARPod_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		B80BBDCB7CD7B9928C522D63C4D693CB /* UIColor+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "ARPod/Classes/UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		B82C7D9D0417073DAF5CF6E31F751744 /* lipsMaterial.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = lipsMaterial.png; path = ARPod/Assets/lipsMaterial.png; sourceTree = "<group>"; };
+		BB8724B6C389746AE1491F09C9CBFCD4 /* ResourceBundle-ARPod-ARPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ARPod-ARPod-Info.plist"; sourceTree = "<group>"; };
+		BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FullFaceSceneViewDelegate.swift; path = ARPod/Classes/FullFaceSceneViewDelegate.swift; sourceTree = "<group>"; };
+		BFB16BDE2BE9DFE9E6ADE8D4774EB8E1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "ARPod/Classes/UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		C1CEDC776A69481E7C25F162BD6CA0A5 /* Pods-ARPod_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ARPod_Example"; path = Pods_ARPod_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60FE4BA317171BF9C05EF447B37FACF /* Pods-ARPod_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARPod_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C75177BE0D2CF6346A89BD6FE4274A64 /* eyelinerMaterial.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = eyelinerMaterial.png; path = ARPod/Assets/eyelinerMaterial.png; sourceTree = "<group>"; };
+		C7532CBE835F8886F96D75065F977167 /* ARPod-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARPod-prefix.pch"; sourceTree = "<group>"; };
+		CD799051B39851C4AE4F46F3397C8585 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D4F9665EC09231D1844796DE17B068C2 /* ARPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARPod.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D959BAB7FA01D562B8EB6F2C85A045B2 /* BundleManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleManager.swift; path = ARPod/Classes/BundleManager.swift; sourceTree = "<group>"; };
 		E7C31089C489ECB2499ABA662C8C30C3 /* Pods-ARPod_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ARPod_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E93D8B94DA35A0B5DC4BD3C0527CC139 /* Pods-ARPod_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ARPod_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		F1482FDA75D4FE85D468A1E7B1D54AED /* Pods-ARPod_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ARPod_Example-frameworks.sh"; sourceTree = "<group>"; };
-		F18DAEC639183A9206F430346E67DCFE /* ARPod */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ARPod; path = ARPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F417A4EA22EB2F4448DC38FE5AD89095 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FB687E4A48308E6AE12CF23D61395CFF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F18DAEC639183A9206F430346E67DCFE /* ARPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ARPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C1F8B60B185BEEEC28778B75218163 /* Materials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Materials.swift; path = ARPod/Classes/Materials.swift; sourceTree = "<group>"; };
 		FF3C94DC2B6994BCBEE4882DC86FF936 /* Pods-ARPod_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ARPod_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		47E63FD3712AB5781D71AE3F97AEC15C /* Frameworks */ = {
+		12305FEF3918C99B853D043DFEA2091C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20410C7CD09A8597AD1E16B526D28101 /* Foundation.framework in Frameworks */,
-				F0A909176EB82EA151725BC70FBAD13D /* QuartzCore.framework in Frameworks */,
-				501BE97C0509BCB695B6C86D93E867A8 /* UIKit.framework in Frameworks */,
+				E326049C93EFDA3954B35B7F3C0FBCF2 /* Foundation.framework in Frameworks */,
+				54963C0F13E8A38E34C1D3CC3C510677 /* QuartzCore.framework in Frameworks */,
+				05E6244E1C454F23BA53C73AAB1E3174 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +136,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B568D6EEB4238AD8A938C2FBACDCDED2 /* Frameworks */ = {
+		B6953389F8F0AC3515AF43BF78FCE365 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -157,6 +162,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A30B47BE3BE5F0CC1C3E8C5F17DB07D /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1FB7E7C5839DE423F499B072AACB1C0F /* ARPod.podspec */,
+				CD799051B39851C4AE4F46F3397C8585 /* LICENSE */,
+				A8A5C847115E5F2A6A037AEAA4ED4B7E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		5F80F96C83D9EFCB1529FE179CB2CC4E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64B4229FF698389D0D8F44AE073DE3B0 /* ARPod.modulemap */,
+				59B8223F03182B1E95437A186655EFAA /* ARPod-dummy.m */,
+				7706FE75B5256078DF996F0389982189 /* ARPod-Info.plist */,
+				C7532CBE835F8886F96D75065F977167 /* ARPod-prefix.pch */,
+				387BDFDA40F106C60BF091FE707AF708 /* ARPod-umbrella.h */,
+				3417690D840C5F3988764B4CFA40393B /* ARPod.debug.xcconfig */,
+				465474FE70C880E6AFDF410AC8F56F08 /* ARPod.release.xcconfig */,
+				BB8724B6C389746AE1491F09C9CBFCD4 /* ResourceBundle-ARPod-ARPod-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ARPod";
+			sourceTree = "<group>";
+		};
 		6F67A3BF975C4345648A06806BAD07BB /* Pods-ARPod_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +203,31 @@
 			);
 			name = "Pods-ARPod_Example";
 			path = "Target Support Files/Pods-ARPod_Example";
+			sourceTree = "<group>";
+		};
+		75B2576E4095800B35CD54A236E2A6BB /* ARPod */ = {
+			isa = PBXGroup;
+			children = (
+				98EE39B418CEDF84CC984A672363D0FE /* ARFilterViewController.swift */,
+				D959BAB7FA01D562B8EB6F2C85A045B2 /* BundleManager.swift */,
+				0216A495003F6076E3BCC4B61325CCD0 /* CircularBuffer.swift */,
+				C75177BE0D2CF6346A89BD6FE4274A64 /* eyelinerMaterial.png */,
+				9E3289624704359335A934CBAE8EE1B9 /* eyeshadowMaterial.png */,
+				BF2DB6CF0E63C13F0DE2F8D68A1FF915 /* FullFaceSceneViewDelegate.swift */,
+				B82C7D9D0417073DAF5CF6E31F751744 /* lipsMaterial.png */,
+				F1C1F8B60B185BEEEC28778B75218163 /* Materials.swift */,
+				1F7AEDFF071D93B69C0EEF6632E261CF /* SCNVector3+Extensions.swift */,
+				739D9AB90F39B514C7ABBD89FA1E4BC6 /* ShowCaseSettingsView.swift */,
+				A090C799BADFA281C3D0EBEF8098D369 /* ShowCaseViewController.swift */,
+				A05115F51EB2E9ED23429400B8A03CD8 /* UIButton+Extensions.swift */,
+				B80BBDCB7CD7B9928C522D63C4D693CB /* UIColor+Extensions.swift */,
+				BFB16BDE2BE9DFE9E6ADE8D4774EB8E1 /* UIImage+Extensions.swift */,
+				7CE31F0E84A0E61DFCE8DADC0DC94265 /* UnsuitableLuminosityWarningView.swift */,
+				5A30B47BE3BE5F0CC1C3E8C5F17DB07D /* Pod */,
+				5F80F96C83D9EFCB1529FE179CB2CC4E /* Support Files */,
+			);
+			name = ARPod;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		837AC830D24AB6AE088041D222CEF18D /* Pods-ARPod_Tests */ = {
@@ -199,60 +255,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AD0D53E141B62FA1502C9B30A0425A43 /* Pod */ = {
+		9EAE6C1D00D85897BCF97E75AFCA49B9 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				65DFFE863E4EF106977B9DDD59A3CAAC /* ARPod.podspec */,
-				FB687E4A48308E6AE12CF23D61395CFF /* LICENSE */,
-				F417A4EA22EB2F4448DC38FE5AD89095 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		C3D768DD940B3D49EAA9178E338415A4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				942B95D224CFD4F643F2702201F89C16 /* ARPod.modulemap */,
-				4C474DBDC257BBC34566F7E89FDB79D5 /* ARPod-dummy.m */,
-				A03C2824ABCB31C66C368A031380C73F /* ARPod-Info.plist */,
-				8489605FF42C54C4CDDF56C0DDF97347 /* ARPod-prefix.pch */,
-				AE10DB6FCAAD17B1BF6C2120EA6FF6E2 /* ARPod-umbrella.h */,
-				555C926B5682BC8169C76D7D9C733CC9 /* ARPod.debug.xcconfig */,
-				677E24D38D363F96CB7277A420D13ABE /* ARPod.release.xcconfig */,
-				0FE2A61F850BF184840C4BB7CA993D98 /* ResourceBundle-ARPod-ARPod-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ARPod";
-			sourceTree = "<group>";
-		};
-		C50288D91B65DE756FECFD36B5DBE510 /* ARPod */ = {
-			isa = PBXGroup;
-			children = (
-				8B9277EF2AF3F2B40076C2A0 /* ARFilterViewController.swift */,
-				8B96A71FA66CB29A0F1D594C8CCDB4A9 /* CircularBuffer.swift */,
-				08471DEF8E80049FDCF9495259BBBB6D /* eyelinerMaterial.png */,
-				06D20221EAFC658335D21CA3DD962409 /* eyeshadowMaterial.png */,
-				3B0DB6C166BB8C2504FDFBB79E71471B /* FullFaceSceneViewDelegate.swift */,
-				23D2CB758E58E4B2EF8590E0B37A6299 /* lipsMaterial.png */,
-				780AB17FE457EDD9603CF5805FEEA2F9 /* Materials.swift */,
-				86B02EAE53E70D8557686505CB55978B /* SCNVector3+Extensions.swift */,
-				56CA62ECB810CE6E67BE6522915AB8C0 /* ShowCaseSettingsView.swift */,
-				549DC22ED40EBD78282C09A628D67CF5 /* ShowCaseViewController.swift */,
-				862FE0B32BDEDDB7C8233A89701AF7D3 /* UIButton+Extensions.swift */,
-				171CC8598F1D40288B3F6D3CB247285A /* UIColor+Extensions.swift */,
-				364B57D21106948FF69F8DCFAE9C71BD /* UIImage+Extensions.swift */,
-				48E6A16872E65232E3472C37BB060C0D /* UnsuitableLuminosityWarningView.swift */,
-				AD0D53E141B62FA1502C9B30A0425A43 /* Pod */,
-				C3D768DD940B3D49EAA9178E338415A4 /* Support Files */,
-			);
-			name = ARPod;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CDA0F5DD172CEFE9473F262AC0AC80FC /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C50288D91B65DE756FECFD36B5DBE510 /* ARPod */,
+				75B2576E4095800B35CD54A236E2A6BB /* ARPod */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -261,7 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				CDA0F5DD172CEFE9473F262AC0AC80FC /* Development Pods */,
+				9EAE6C1D00D85897BCF97E75AFCA49B9 /* Development Pods */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				F00A3CDB09623A946C08792707F468CC /* Products */,
 				9822112F765355EF7AFA1DE2BFB343EF /* Targets Support Files */,
@@ -271,7 +277,7 @@
 		F00A3CDB09623A946C08792707F468CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F18DAEC639183A9206F430346E67DCFE /* ARPod */,
+				F18DAEC639183A9206F430346E67DCFE /* ARPod.framework */,
 				D4F9665EC09231D1844796DE17B068C2 /* ARPod.bundle */,
 				C1CEDC776A69481E7C25F162BD6CA0A5 /* Pods-ARPod_Example */,
 				1B5E93AC9115715753201E21C8F45FD0 /* Pods-ARPod_Tests */,
@@ -292,11 +298,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7099C703718F42B66228B0F580132131 /* Headers */ = {
+		4AA580A93A07E1219AFF67D9C4C1913E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751ADDD28C61AB2936AB6389CB41A7FC /* ARPod-umbrella.h in Headers */,
+				42EF74C8E9749C6F888DA9521423BC5C /* ARPod-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,30 +327,30 @@
 /* Begin PBXNativeTarget section */
 		0612774B3531364410A626AF02D7016E /* ARPod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC933C7162C22231621FBF5C9BFF8091 /* Build configuration list for PBXNativeTarget "ARPod" */;
+			buildConfigurationList = E148AE59C6169AA0CBB812DF63DDE0AB /* Build configuration list for PBXNativeTarget "ARPod" */;
 			buildPhases = (
-				7099C703718F42B66228B0F580132131 /* Headers */,
-				CF4DE58929034833B2593EB2586AA879 /* Sources */,
-				47E63FD3712AB5781D71AE3F97AEC15C /* Frameworks */,
-				055E199A7ECC37562CEE1FE524E7F214 /* Resources */,
+				4AA580A93A07E1219AFF67D9C4C1913E /* Headers */,
+				5396A17857A4A4028C09A04B412B51F0 /* Sources */,
+				12305FEF3918C99B853D043DFEA2091C /* Frameworks */,
+				DAC4DE6BDC8BB88AD3F94FB4DCCA5462 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D008BA1DE2E02039F72BE815188A1FB7 /* PBXTargetDependency */,
+				1E4C41363E829850D9E67E640E7B4CB7 /* PBXTargetDependency */,
 			);
 			name = ARPod;
 			productName = ARPod;
-			productReference = F18DAEC639183A9206F430346E67DCFE /* ARPod */;
+			productReference = F18DAEC639183A9206F430346E67DCFE /* ARPod.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9E1698D3A1EC826640D5C24D9347AD8E /* ARPod-ARPod */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CB0DB033B97B5B76307FC1FFFB3DBA1F /* Build configuration list for PBXNativeTarget "ARPod-ARPod" */;
+			buildConfigurationList = 0CE33CB68269244802D036B43221D6BC /* Build configuration list for PBXNativeTarget "ARPod-ARPod" */;
 			buildPhases = (
-				173F17CF1C28FB865F1BF8671074D9C5 /* Sources */,
-				B568D6EEB4238AD8A938C2FBACDCDED2 /* Frameworks */,
-				9F61E2B2CAB4690AFAEB2C4F5C3F3CD7 /* Resources */,
+				703C7FA4352EA18BE63B80EFE2FAF1E9 /* Sources */,
+				B6953389F8F0AC3515AF43BF78FCE365 /* Frameworks */,
+				B7DE44CABEF6AC2C1CA5BD89DFEBB613 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -367,7 +373,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				740A27BD197022606CB153469C75F22B /* PBXTargetDependency */,
+				557D70057C64B2AD60E1C5006624BB8C /* PBXTargetDependency */,
 			);
 			name = "Pods-ARPod_Tests";
 			productName = Pods_ARPod_Tests;
@@ -386,7 +392,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				170398CD2633686FDF388CAB8C1869EB /* PBXTargetDependency */,
+				D9E828720B599E605443435B7C961120 /* PBXTargetDependency */,
 			);
 			name = "Pods-ARPod_Example";
 			productName = Pods_ARPod_Example;
@@ -402,6 +408,9 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					0612774B3531364410A626AF02D7016E = {
+						DevelopmentTeam = 5Y3748E7BV;
+					};
 					9E1698D3A1EC826640D5C24D9347AD8E = {
 						DevelopmentTeam = 5Y3748E7BV;
 					};
@@ -429,14 +438,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		055E199A7ECC37562CEE1FE524E7F214 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7F410D2897380E6FF58363EFFA5B2A1 /* ARPod.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		72C56AED6AB8FFF083C673FF0CF03D60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,13 +445,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F61E2B2CAB4690AFAEB2C4F5C3F3CD7 /* Resources */ = {
+		B7DE44CABEF6AC2C1CA5BD89DFEBB613 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB805D36FB3C562393A462F337091995 /* eyelinerMaterial.png in Resources */,
-				6E74ED84DE714BCAD0B39195D3996EF3 /* eyeshadowMaterial.png in Resources */,
-				3F7127579A4A90C37BF76FB1564B37FA /* lipsMaterial.png in Resources */,
+				B372608F82C778E1E5E567AE9248F770 /* eyelinerMaterial.png in Resources */,
+				2EF7052EF82ACDE6341905DF2C4647AA /* eyeshadowMaterial.png in Resources */,
+				F5D7F09B0605E9A991F85E633A32D455 /* lipsMaterial.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,21 +462,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		173F17CF1C28FB865F1BF8671074D9C5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		DAC4DE6BDC8BB88AD3F94FB4DCCA5462 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7982C1F9C0526742FE72525EBB2177B0 /* ARPod.bundle in Resources */,
+				8B43EB752AF46D89001B9A9F /* eyeshadowMaterial.png in Resources */,
+				8B43EB762AF46D8C001B9A9F /* lipsMaterial.png in Resources */,
+				8B43EB742AF46D87001B9A9F /* eyelinerMaterial.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		2534A50212AF81E797B501C5819CE13F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				61249899849FBB82A1BB71030B739412 /* Pods-ARPod_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5396A17857A4A4028C09A04B412B51F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21BB2B4DDD72E9C648B298CB951EB234 /* ARFilterViewController.swift in Sources */,
+				8BB0910F2D130747A04CD92FB9B5983A /* ARPod-dummy.m in Sources */,
+				0E965C1746977AF6D3B0604087396BBD /* BundleManager.swift in Sources */,
+				F6FDEEB6069B2622808CDC5EAFF41D3A /* CircularBuffer.swift in Sources */,
+				E1064FA04DD2EAACCEC2CC190EE183BF /* FullFaceSceneViewDelegate.swift in Sources */,
+				24BE42B7584B094A2A4F513013F3B5DF /* Materials.swift in Sources */,
+				78BE851F737CB1911FAA7AD7924585FD /* SCNVector3+Extensions.swift in Sources */,
+				4789B31803DE1958086C3B2A5DA0394C /* ShowCaseSettingsView.swift in Sources */,
+				E4A0F420336512A312A2CB1D732D0CE4 /* ShowCaseViewController.swift in Sources */,
+				3BF0184C5435479F4C9D223C98D9715E /* UIButton+Extensions.swift in Sources */,
+				E19E8B325950138468AB991B72B3CD6C /* UIColor+Extensions.swift in Sources */,
+				7442E32F5744488D59D0AD81A6B459FB /* UIImage+Extensions.swift in Sources */,
+				524A9072C07BAC9920472F3C1D6DB7DC /* UnsuitableLuminosityWarningView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,49 +512,117 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CF4DE58929034833B2593EB2586AA879 /* Sources */ = {
+		703C7FA4352EA18BE63B80EFE2FAF1E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				620EAFE8D3A3886CDDA9DEEB9CF12A0D /* ARPod-dummy.m in Sources */,
-				19140D5B8FCDB1B43D35A9C2B310D383 /* CircularBuffer.swift in Sources */,
-				4EE80818FF5ECCE85776019296672B8E /* FullFaceSceneViewDelegate.swift in Sources */,
-				78A815C94F8B9D638BDB655336C923F3 /* Materials.swift in Sources */,
-				16D97814447AFDFE7A9994D2580F8998 /* SCNVector3+Extensions.swift in Sources */,
-				C79B8A7C367670527DB720EEA94E6308 /* ShowCaseSettingsView.swift in Sources */,
-				34BEF0639B858C6C3A1E09038922442F /* ShowCaseViewController.swift in Sources */,
-				115925307A44708B6989238D04B6B3CC /* UIButton+Extensions.swift in Sources */,
-				648F6616B7610A54A65EC0D06C9B74DE /* UIColor+Extensions.swift in Sources */,
-				69BF00F3C982346944284B3163DD0192 /* UIImage+Extensions.swift in Sources */,
-				E1D3CF69248A8E3C75435018386A24A4 /* UnsuitableLuminosityWarningView.swift in Sources */,
-				8B9277F02AF3F2B40076C2A0 /* ARFilterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		170398CD2633686FDF388CAB8C1869EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ARPod;
-			target = 0612774B3531364410A626AF02D7016E /* ARPod */;
-			targetProxy = 6D6E061D200AFDDA991531D94121E88E /* PBXContainerItemProxy */;
-		};
-		740A27BD197022606CB153469C75F22B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-ARPod_Example";
-			target = FABF0ADF602849C64AE61149B1CD805A /* Pods-ARPod_Example */;
-			targetProxy = 76079EA28DDF55FB8719445DA684BB97 /* PBXContainerItemProxy */;
-		};
-		D008BA1DE2E02039F72BE815188A1FB7 /* PBXTargetDependency */ = {
+		1E4C41363E829850D9E67E640E7B4CB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "ARPod-ARPod";
 			target = 9E1698D3A1EC826640D5C24D9347AD8E /* ARPod-ARPod */;
-			targetProxy = 93E6AD289EEE99B1211EC1804C3F9434 /* PBXContainerItemProxy */;
+			targetProxy = 31373F7F500C829502FCD7ADD5A9E539 /* PBXContainerItemProxy */;
+		};
+		557D70057C64B2AD60E1C5006624BB8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ARPod_Example";
+			target = FABF0ADF602849C64AE61149B1CD805A /* Pods-ARPod_Example */;
+			targetProxy = 2606614C32FD6838C0C2A6FD65AE9883 /* PBXContainerItemProxy */;
+		};
+		D9E828720B599E605443435B7C961120 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ARPod;
+			target = 0612774B3531364410A626AF02D7016E /* ARPod */;
+			targetProxy = DB21C664CE127B4E63548776D3827A7E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0C8DEF5F653DA9A66B10BBE3FA18C96B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 465474FE70C880E6AFDF410AC8F56F08 /* ARPod.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5Y3748E7BV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ARPod/ARPod-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARPod/ARPod-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ARPod/ARPod.modulemap";
+				PRODUCT_MODULE_NAME = ARPod;
+				PRODUCT_NAME = ARPod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		10F3DF20BAB102779F3D283BE52F1EBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 465474FE70C880E6AFDF410AC8F56F08 /* ARPod.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ARPod";
+				DEVELOPMENT_TEAM = 5Y3748E7BV;
+				IBSC_MODULE = ARPod;
+				INFOPLIST_FILE = "Target Support Files/ARPod/ResourceBundle-ARPod-ARPod-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = ARPod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		138C4C03127BD86CA671D4864C8FBDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3417690D840C5F3988764B4CFA40393B /* ARPod.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 5Y3748E7BV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ARPod/ARPod-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ARPod/ARPod-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ARPod/ARPod.modulemap";
+				PRODUCT_MODULE_NAME = ARPod;
+				PRODUCT_NAME = ARPod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1BE49276467E83ECBF2690AF7E57FD8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B9E14607E8D660EF9820A283AF7BDE7 /* Pods-ARPod_Example.debug.xcconfig */;
@@ -558,88 +651,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		37F1BF9F0C21DF3EC6189549777A985F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 677E24D38D363F96CB7277A420D13ABE /* ARPod.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ARPod/ARPod-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ARPod/ARPod-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ARPod/ARPod.modulemap";
-				PRODUCT_MODULE_NAME = ARPod;
-				PRODUCT_NAME = ARPod;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		572C5CE7D985236C935864C7EB808DF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 555C926B5682BC8169C76D7D9C733CC9 /* ARPod.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ARPod";
-				DEVELOPMENT_TEAM = 5Y3748E7BV;
-				IBSC_MODULE = ARPod;
-				INFOPLIST_FILE = "Target Support Files/ARPod/ResourceBundle-ARPod-ARPod-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_NAME = ARPod;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		5841DF3F2265F2482FDCF5D63E22F1B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 555C926B5682BC8169C76D7D9C733CC9 /* ARPod.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ARPod/ARPod-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ARPod/ARPod-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ARPod/ARPod.modulemap";
-				PRODUCT_MODULE_NAME = ARPod;
-				PRODUCT_NAME = ARPod;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -842,6 +853,23 @@
 			};
 			name = Release;
 		};
+		BBE69697F0B7E3DB211C2BC45401B823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3417690D840C5F3988764B4CFA40393B /* ARPod.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ARPod";
+				DEVELOPMENT_TEAM = 5Y3748E7BV;
+				IBSC_MODULE = ARPod;
+				INFOPLIST_FILE = "Target Support Files/ARPod/ResourceBundle-ARPod-ARPod-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_NAME = ARPod;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		DB9E9110E5987A73C67BD9057A921017 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20CF22EABAB33459F7F2182C60607B7D /* Pods-ARPod_Example.release.xcconfig */;
@@ -877,26 +905,18 @@
 			};
 			name = Release;
 		};
-		F906C46DD8798079789FB93C16DE355D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 677E24D38D363F96CB7277A420D13ABE /* ARPod.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ARPod";
-				DEVELOPMENT_TEAM = 5Y3748E7BV;
-				IBSC_MODULE = ARPod;
-				INFOPLIST_FILE = "Target Support Files/ARPod/ResourceBundle-ARPod-ARPod-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				PRODUCT_NAME = ARPod;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0CE33CB68269244802D036B43221D6BC /* Build configuration list for PBXNativeTarget "ARPod-ARPod" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBE69697F0B7E3DB211C2BC45401B823 /* Debug */,
+				10F3DF20BAB102779F3D283BE52F1EBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -915,20 +935,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC933C7162C22231621FBF5C9BFF8091 /* Build configuration list for PBXNativeTarget "ARPod" */ = {
+		E148AE59C6169AA0CBB812DF63DDE0AB /* Build configuration list for PBXNativeTarget "ARPod" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5841DF3F2265F2482FDCF5D63E22F1B7 /* Debug */,
-				37F1BF9F0C21DF3EC6189549777A985F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB0DB033B97B5B76307FC1FFFB3DBA1F /* Build configuration list for PBXNativeTarget "ARPod-ARPod" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				572C5CE7D985236C935864C7EB808DF4 /* Debug */,
-				F906C46DD8798079789FB93C16DE355D /* Release */,
+				138C4C03127BD86CA671D4864C8FBDB5 /* Debug */,
+				0C8DEF5F653DA9A66B10BBE3FA18C96B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

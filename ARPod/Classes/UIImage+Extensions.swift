@@ -40,5 +40,10 @@ extension UIImage {
         }
         return self
     }
+    
+    static func make(name: String) -> UIImage? {
+        let bundle = Bundle(for: self)
+        return UIImage(named: "ARPod/\(name)", in: bundle, compatibleWith: nil)
+    }
 }
 
